@@ -3,64 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs-Wuumart</title>
-    <meta name="description" content="Discover WuuMart: your favorite hub for online gaming and valuable blogs. Play a wide range of free games or read our latest posts on tech, lifestyle, and more.">
-    <meta name="keywords" content="WuuMart, online games, free games, blog, gaming, tech blogs, lifestyle blogs, Play N Joy">
+    <title>WuuMart Blog: Your Hub for Anime,Gaming & Tech</title>
+    <meta name="description" content="Explore WuuMart's blog for the latest on online games, tech reviews, lifestyle tips, and more. Find free games to play and engaging articles to read.">
+    <meta name="keywords" content="WuuMart, online games, free games, blog, gaming, tech blogs, lifestyle blogs, Play N Joy, game reviews, tech news, anime streaming">
+    <meta name="author" content="WuuMart Team">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/stlyes.css">
+    <link rel="canonical" href="https://blogs.wuumart.xyz">
 </head>
 <body>
     <div class="nav">
-        <div class="menu" onclick="toggleMenu(); this.classList.toggle('change');">
+        <div class="menu" onclick="toggleMenu(); this.classList.toggle('change');" aria-label="Toggle navigation menu">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-
-        <img class="logo" src="/images/logo.png" alt="Blogs Wuumart a place to explore world">
-        <header>Blogs-Wuumart</header>
-
-        <div class="menulinks">
+        <a href="/" class="logo-link" aria-label="WuuMart Home Page">
+            <img class="logo" src="/images/logo.png" alt="WuuMart Blog Logo">
+        </a>
+              <header>blogs-Wuumart</header>
+        <div class="menulinks" role="navigation" aria-label="Main navigation">
             <a href="/">Home</a>
             <a href="https://wuumart.xyz">Main Page</a>
-            <a href="/information/contact">Contact us</a>
+            <a href="/information/contact">Contact Us</a>
             <a href="/information/about">About Us</a>
         </div>
     </div>
+  
+
 
     <main>
+        <h1>Latest Blog Posts</h1>
         <div class="blogs">
-            <h2>Best Websites to Watch Animes for Free</h2>
-            <h6>by <a href="/about/author">Raza</a></h6>
-            <h5>Date:fri,Sep 12,2025.</h5> 
-            <img class="blogsimg" src="/images/blog1.png" alt="image of anime characters">
-            <p> In this modren era many peoples are watching animes and entertaining themselves but they don't have many resources to watch animes as some of them are available on Netflix others are in crunchyroll . Here are some top phishing web... </p>
+            <h2><a href="/blogs/best-free-anime-websites">Best Websites to Watch Animes for Free</a></h2>
+            <h6>by <a href="/about/author/raza" rel="author">Raza</a></h6>
+            <h5>Date: <time datetime="2025-09-12">fri,Sep 12,2025</time></h5> 
+            <img class="blogsimg" src="/images/blog1.png" alt="An image showing popular anime characters from various shows like One Piece and Naruto." loading="lazy">
+            <p>In this modern era, many people are watching animes but don't have many resources to watch them. While some are on Netflix and others on Crunchyroll, many free options exist. Here are some of the top websites to stream anime for free...</p>
             <div class="more">
-                <a href="#">Read More</a>
+                <a href="/blogs/best-free-anime-websites" aria-label="Read more about best websites to watch animes for free">Read More</a>
             </div>
         </div>
         <div class="blogs">
-        <h2>Test Blog 2</h2>
-        <h6>by <a href="/about/author">Raza</a></h6>
-            <h5>Date:fri,Sep 12,2025.</h5> 
-        <img class="blogsimg" src="/images/blog2.png" alt="image error">
-        <p>No Encrypted Scripts
-        Remove Footer Credits
-        One Time Payment
-        Customization Support*
-        Blog Setup Service
-        Lifetime Template Updates
-        3 Months of Premium Support</p>
-        <div class="more">
-            <a href="#">Read More</a>
-        </div>
+            <h2><a href="/blogs/test-blog-2">Test Blog 2: Features and Services</a></h2>
+            <h6>by <a href="/about/author/raza" rel="author">Raza</a></h6>
+            <h5>Date: <time datetime="2025-09-12">fri,Sep 12,2025</time></h5> 
+            <img class="blogsimg" src="/images/blog2.png" alt="A screenshot of a website template highlighting its features and services." loading="lazy">
+            <p>This blog post details the features and services of our templates, including no encrypted scripts, a one-time payment model, lifetime updates, and dedicated customer support...</p>
+            <div class="more">
+                <a href="/blogs/test-blog-2" aria-label="Read more about Test Blog 2: features and services">Read More</a>
+            </div>
         </div>
         <div class="pagination">
-            <a href="#">Next Page &raquo;</a>
+            <a href="/blogs/page-2" aria-label="Go to next page of blogs">Next Page &raquo;</a>
         </div>
     </main>
 
     <footer>
-        &copy; All Rights Reserved
+        <p>&copy; All Rights Reserved</p>
     </footer>
     
     <script>
