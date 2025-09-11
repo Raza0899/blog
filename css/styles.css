@@ -14,7 +14,7 @@ body {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    gap: 20px;
+    gap: 10px; /* Reduced gap for a tighter layout */
     flex-wrap: wrap;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -51,17 +51,19 @@ body {
     height: 40px;
     border-radius: 50%;
 }
-
 .nav header {
-    font-size: 30px;
+  white-space:pre;
+   font-size:50px;
     color: darkblue;
     font-weight: bold;
-    margin-right: auto; /* Pushes the rest of the items to the right */
+    
+    /* Removed margin-right: auto; */
 }
 
 .nav .menulinks {
     display: flex;
     gap: 15px;
+    margin-left: auto; /* Pushes the menu links to the right */
 }
 
 .nav a {
@@ -77,13 +79,13 @@ body {
     border-radius: 5px;
 }
 
-/* Blog Section -- MODIFIED */
+/* Blog Section */
 main {
     flex-grow: 1;
-    display: flex; /* Makes blog posts horizontal */
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allows blogs to wrap to the next line */
-    gap: 20px; /* Adds space between blog posts */
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px;
 }
 
@@ -92,7 +94,7 @@ main {
     background-color: white;
     border-radius: 20px;
     padding: 20px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -131,12 +133,12 @@ main {
     line-height: 1.5;
     color: #444;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
 }
 
 /* Read More Button Styling */
 .more {
-    margin-top: auto; /* Pushes the 'Read More' link to the bottom */
+    margin-top: auto;
     text-align: right;
     padding-top: 10px;
 }
@@ -159,12 +161,12 @@ footer {
     color: white;
     font-size: 16px;
     padding: 10px;
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 /* Next Page Option */
 .pagination {
-    width: 100%; /* Takes full width of the main section */
+    width: 100%;
     text-align: center;
     padding: 20px 0;
 }
@@ -184,47 +186,41 @@ footer {
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
-    /* Stacks blogs vertically on smaller screens for better readability */
-    .blogs {
-        width: 90%;
-    }
-}
-
 @media (max-width: 600px) {
     .nav {
-        flex-direction: row; 
-        justify-content: space-between; 
+        flex-direction: row;
+        justify-content: flex-start; /* Aligns items to the start of the container */
         align-items: center;
-    }
-    
-    .nav .menu {
-        display: block; /* Show hamburger menu */
-        order: 1; 
-    }
-    
-    .nav .logo, .nav header {
-        display: block; 
-        margin: 0;
+        flex-wrap: nowrap;
     }
 
-    .nav .logo {
-        order: 2; 
+    .nav .menu {
+        display: block; /* Show hamburger menu */
+    }
+
+    .nav .logo-link {
+        margin-left: 10px;
     }
 
     .nav header {
-        order: 3; 
+        font-size: 25px;
     }
 
     .nav .menulinks {
-        display: none; 
+        display: none;
         width: 100%;
         flex-direction: column;
-        order: 4; 
+        order: 4;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-left: 0;
     }
-    
+
     .nav .menulinks.show {
-        display: flex; 
+        display: flex;
     }
 
     .nav a {
