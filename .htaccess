@@ -1,1 +1,15 @@
+<Files .htaccess>
+    Require all denied
+</Files>
 
+# Turn on the Rewrite Engine
+RewriteEngine On
+RewriteBase /
+
+# Remove .html file extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# The 404 Error Page Rule
+ErrorDocument 404 /404.html
