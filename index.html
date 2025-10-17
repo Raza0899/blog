@@ -12,62 +12,53 @@
     <link rel="canonical" href="https://blogs.wuumart.xyz">
 </head>
 <body>
-    <div class="nav">
-        <div class="menu" onclick="toggleMenu(); this.classList.toggle('change');" aria-label="Toggle navigation menu">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+    <div class="topnav">
+        <div class="menu-header">
+            <div class="menu-icon" onclick="toggleMenu(); this.classList.toggle('change');">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <a class="logo-link" href="/">
+                <img src="/images/logo.png" alt="WuuMart official logo." class="nav-logo" onerror="this.onerror=null; this.src='https://placehold.co/45x45/3f51b5/ffffff?text=W'">
+                WuuMart
+            </a>
         </div>
-        <a href="/" class="logo-link" aria-label="WuuMart Home Page">
-            <img class="logo" src="/images/logo.png" alt="WuuMart Blog Logo">
-        </a>
-              <header>blogs-Wuumart</header>
-        <div class="menulinks" role="navigation" aria-label="Main navigation">
+        <div class="menu-links">
             <a href="/">Home</a>
-            <a href="https://wuumart.xyz">Main Page</a>
+            <a href="/blog/index.html" class="active">Blogs</a> 
+            <a href="/information/news">News</a>
             <a href="/information/contact">Contact Us</a>
             <a href="/information/about">About Us</a>
         </div>
     </div>
-  
-
-
+    
     <main>
-        <h1>Latest Blog Posts</h1>
-        <div class="blogs">
-            <h2><a href="/blogs/best-free-anime-websites.html">Best Websites to Watch Animes for Free</a></h2>
-            <h6>by <a href="/about/author/raza" rel="author">Raza</a></h6>
-            <h5>Date: <time datetime="2025-09-12">fri,Sep 12,2025</time></h5> 
-            <img class="blogsimg" src="/images/blog1.png" alt="An image showing popular anime characters from various shows like One Piece and Naruto." loading="lazy">
-            <p>In this modern era, many people are watching animes but don't have many resources to watch them. While some are on Netflix and others on Crunchyroll, but they are paid 😓. Here are some of the top Websites and Apps to stream anime for free, Hianime, Aniwatch , ...</p>
-            <div class="more">
-                <a href="/blogs/best-free-anime-websites.html" aria-label="Read more about best websites to watch animes for free">Read More</a>
-            </div>
+        <div class="blog-list-header">
+            <h1>The WuuMart Knowledge Hub</h1>
+            <p>Your source for game reviews, speed test tips, and technology news.</p>
         </div>
-        <div class="blogs">
-            <h2><a href="/blogs/test-blog-2">Test Blog 2: Features and Services</a></h2>
-            <h6>by <a href="/about/author/raza" rel="author">Raza</a></h6>
-            <h5>Date: <time datetime="2025-09-12">fri,Sep 12,2025</time></h5> 
-            <img class="blogsimg" src="/images/blog2.png" alt="A screenshot of a website template highlighting its features and services." loading="lazy">
-            <p>This blog post details the features and services of our templates, including no encrypted scripts, a one-time payment model, lifetime updates, and dedicated customer support...</p>
-            <div class="more">
-                <a href="/blogs/test-blog-2" aria-label="Read more about Test Blog 2: features and services">Read More</a>
-            </div>
-        </div>
-        <div class="pagination">
-            <a href="/blogs/page-2" aria-label="Go to next page of blogs">Next Page &raquo;</a>
+        
+        <section id="blog-posts-container">
+            <p style="text-align: center;">Loading blog posts...</p>
+        </section>
+
+        <div id="pagination-container">
+            <!-- Pagination will be inserted here -->
         </div>
     </main>
 
-    <footer>
-        <p>&copy; Wuu-Mart </p>
-    </footer>
-    
+    <footer>&copy; All rights Reserved</footer>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+
     <script>
         function toggleMenu() {
-            const menu = document.querySelector('.menulinks');
+            const menu = document.querySelector('.menu-links');
             menu.classList.toggle('show');
         }
     </script>
 </body>
 </html>
+
