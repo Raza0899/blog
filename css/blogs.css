@@ -237,4 +237,4 @@ footer {
     /* Blog Specific Mobile */
     #blog-posts-container { grid-template-columns: 1fr; padding: 0 15px; gap: 20px; }
     .pagination-btn { padding: 8px 12px; margin: 0 3px; }
-    }
+}
