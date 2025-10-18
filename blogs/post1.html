@@ -87,13 +87,36 @@
 
     <script src="script.js"></script>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.menu-links');
-            menu.classList.toggle('show');
-            // This line fixes the menu icon toggle on click as well
-            document.querySelector('.menu-icon').classList.toggle('change');
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.menu-links');
+        menu.classList.toggle('show');
+        document.querySelector('.menu-icon').classList.toggle('change');
+    }
+    
+    // CORRECTED JAVASCRIPT FUNCTION TO SWITCH STYLESHEETS
+    function switchStylesheet() {
+        const currentStyleLink = document.getElementById('page-style');
+        
+        // Define the two paths
+        const originalPath = 'css/blogs.css';
+        const newPath = 'css/blogs2.css';
+
+        // Check if the current href ENDS with the original path.
+        // This makes the comparison work even if the browser returns the full URL.
+        if (currentStyleLink.href.endsWith(originalPath)) {
+            // Change to the new style
+            currentStyleLink.setAttribute('href', newPath);
+            document.getElementById('style-switcher').textContent = 'Original Style';
+            console.log('Switched to new style.');
+        } else {
+            // Change back to the original style
+            currentStyleLink.setAttribute('href', originalPath);
+            document.getElementById('style-switcher').textContent = 'Change Style';
+            console.log('Switched back to original style.');
         }
-    </script>
+    }
+</script>
+
 </body>
 </html>
