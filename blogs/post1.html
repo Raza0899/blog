@@ -6,7 +6,7 @@
     <title>WuuMart Co. - Blogs & Articles</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/css/blogs.css"> 
+    <link rel="stylesheet" id="page-style" href="/css/blogs.css"> 
 </head>
 <body>
     <div class="topnav">
@@ -27,9 +27,12 @@
             <a href="/information/news">News</a>
             <a href="/information/contact">Contact Us</a>
             <a href="/information/about">About Us</a>
+            <button id="style-switcher" onclick="switchStylesheet()">Change Style</button>
         </div>
     </div>
-<main> <div class="article-content"> <h1> What is Youtube? </h1>
+<main> 
+    <div class="article-content"> 
+        <h1> What is Youtube? </h1>
         <p class="author-info">By **A WuuMart Contributor** | October 17, 2025</p>
         <div class="article-body">
             <p><strong>More Than a Platform: A Human History of YouTube</strong></p>
@@ -94,11 +97,12 @@
         document.querySelector('.menu-icon').classList.toggle('change');
     }
     
-    // CORRECTED JAVASCRIPT FUNCTION TO SWITCH STYLESHEETS
+    // This is the corrected JavaScript function for reliable toggling.
     function switchStylesheet() {
         const currentStyleLink = document.getElementById('page-style');
         
         // Define the two paths
+        // NOTE: The paths are now updated to match your specification (css/blogs.css and css/blogs2.css)
         const originalPath = 'css/blogs.css';
         const newPath = 'css/blogs2.css';
 
