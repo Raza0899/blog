@@ -227,3 +227,34 @@ footer {
     .article-content p { font-size: 1em; }
     .article-body th, .article-body td { padding: 10px; font-size: 0.9em; }
 }
+/* ========================================================== */
+/* NEW BUTTON STYLES FOR SWITCHING (Added to existing CSS) */
+/* ========================================================== */
+
+/* Style for the new button in the menu-links */
+#style-switcher {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-left: 20px; /* Space it out from the links */
+    text-decoration: none; /* Treat it like a link */
+}
+
+#style-switcher:hover {
+    background-color: var(--primary-darker);
+    transform: translateY(-1px);
+}
+
+@media screen and (max-width: 600px) {
+    #style-switcher {
+        width: calc(100% - 36px); /* Full width minus padding */
+        text-align: left;
+        margin: 10px 18px; /* Top/Bottom margin and left/right padding */
+    }
+}
