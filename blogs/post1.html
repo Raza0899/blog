@@ -89,29 +89,35 @@
     <footer>&copy; All rights Reserved</footer>
 
 <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.menu-links');
-            menu.classList.toggle('show');
-            document.querySelector('.menu-icon').classList.toggle('change');
-        }
+    function toggleMenu() {
+        const menu = document.querySelector('.menu-links');
+        menu.classList.toggle('show');
+        document.querySelector('.menu-icon').classList.toggle('change');
+    }
+    
+    // CORRECTED JAVASCRIPT FUNCTION FOR RELIABLE SWITCHING
+    function switchStylesheet() {
+        const currentStyleLink = document.getElementById('page-style');
         
-        // NEW JAVASCRIPT FUNCTION TO SWITCH STYLESHEETS
-        function switchStylesheet() {
-            const currentStyle = document.getElementById('page-style');
-            
-            // Toggle between the original style and a hypothetical new style path
-            if (currentStyle.getAttribute('href') === 'css/blogs.css') {
-                currentStyle.setAttribute('href', 'css/blogs2.css');
-                document.getElementById('style-switcher').textContent = 'With Css';
-                console.log('Switched to css/blogs2.css');
-            } else {
-                currentStyle.setAttribute('href', 'css/blogs.css');
-                document.getElementById('style-switcher').textContent = 'Pure HTML';
-                console.log('Switched to css/blogs.css');
-            }
+        // Define the paths
+        const originalPath = '/css/blogs.css'; // Use the absolute path if your HTML link uses it
+        const newPath = '/css/blogs2.css';     // Use the absolute path if your HTML link uses it
+
+        // Check if the current href ENDS with the ORIGINAL path
+        // This is necessary because the browser usually converts the href to an absolute URL
+        if (currentStyleLink.href.endsWith(originalPath)) {
+            // Change to the new style
+            currentStyleLink.setAttribute('href', newPath);
+            document.getElementById('style-switcher').textContent = 'With Css';
+            console.log('Switched to ' + newPath);
+        } else {
+            // Change back to the original style
+            currentStyleLink.setAttribute('href', originalPath);
+            document.getElementById('style-switcher').textContent = 'Pure HTML';
+            console.log('Switched back to ' + originalPath);
         }
+    }
 </script>
-
-
+    
 </body>
 </html>
